@@ -1,0 +1,116 @@
+/* General App Styling */
+.app {
+  padding: 30px 60px;
+  background-color: #f7f9fc;
+}
+
+/* Header */
+.header {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #222;
+}
+
+.header p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Grid Layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Individual Card */
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #1b070d;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.stock {
+  font-size: 14px;
+  color: #4caf50;
+  margin-bottom: 6px;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.card-content button {
+  padding: 8px 14px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
